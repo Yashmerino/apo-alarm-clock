@@ -1,6 +1,16 @@
 body {
-    font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: hotpink;
+  text-decoration: none;
+}
+
+a:visited {
+  color: hotpink;
+  text-decoration: none;
 }
