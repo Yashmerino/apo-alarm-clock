@@ -1,7 +1,18 @@
 import React from "react";
+import { Typography, Box } from "@mui/material";
 
-const ClockContainer = () => {
-  return <div className="clock-container"></div>;
+const ClockContainer = (props) => {
+  return (
+    <Box
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      minHeight="50%"
+      mt="10%"
+    >
+      <div className="clock"></div>
+    </Box>
+  );
 };
 
 export default ClockContainer;
