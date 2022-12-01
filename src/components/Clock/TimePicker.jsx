@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { TextField } from "@mui/material";
 
 const returnCurrentTime = (date) => {
@@ -18,13 +18,22 @@ const returnCurrentTime = (date) => {
 const TimePicker = (props) => {
   const [currentTime, setCurrentTime] = useState(returnCurrentTime(new Date()));
 
+  useEffect(() => {
+    const interval = setInterval(
+      () => setCurrentTime(returnCurrentTime(new Date())),
+      1000
+    );
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   return (
     <>
       <TextField
         id="time"
         label={"Current time: " + currentTime}
         type="time"
-        defaultValue={new Date().getHours() + ":" + new Date().getMinutes()}
         InputLabelProps={{
           shrink: true,
         }}
@@ -32,6 +41,7 @@ const TimePicker = (props) => {
           step: 300,
         }}
         sx={{ width: "25%" }}
+        disabled={!props.light}
       />
     </>
   );

@@ -1,19 +1,19 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Header from "../components/Header/Header.jsx";
 import ClockContainer from "../components/Clock/ClockContainer.jsx";
 import Footer from "../components/Footer/Footer.jsx";
-import CssBaseline from '@mui/material/CssBaseline';
+import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 const themeLight = createTheme({
   palette: {
-    mode: 'light',
+    mode: "light",
   },
 });
 
 const themeDark = createTheme({
   palette: {
-    mode: 'dark',
+    mode: "dark",
   },
 });
 
@@ -24,7 +24,7 @@ const App = (props) => {
     <ThemeProvider theme={light ? themeLight : themeDark}>
       <CssBaseline />
       <Header />
-      <ClockContainer setLight={() => setLight()} />
+      <ClockContainer setLight={setLight} light={light} />
       <Footer />
     </ThemeProvider>
   );
