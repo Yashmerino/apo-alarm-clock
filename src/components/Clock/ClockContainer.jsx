@@ -1,5 +1,6 @@
 import React from "react";
-import { Typography, Box } from "@mui/material";
+import { Box } from "@mui/material";
+import TimePicker from "./TimePicker";
 
 const ClockContainer = (props) => {
   return (
@@ -10,7 +11,7 @@ const ClockContainer = (props) => {
       minHeight="50%"
       mt="10%"
     >
-      <div className="clock"></div>
+      <TimePicker />
     </Box>
   );
 };

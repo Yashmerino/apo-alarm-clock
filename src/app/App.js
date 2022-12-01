@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-import Header from "../components/Header.jsx";
-import ClockContainer from "../components/ClockContainer.jsx";
-import Footer from "../components/Footer.jsx";
+import Header from "../components/Header/Header.jsx";
+import ClockContainer from "../components/Clock/ClockContainer.jsx";
+import Footer from "../components/Footer/Footer.jsx";
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
