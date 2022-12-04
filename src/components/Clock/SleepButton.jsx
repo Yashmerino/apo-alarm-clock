@@ -6,8 +6,8 @@ const SleepButton = (props) => {
   const onClick = (e) => {
     e.preventDefault();
 
-    let isValid = /^([0-9][0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/.test(
-      document.getElementById(":r1:").value
+    let isValid = /^([2][0-3]:[0-5][0-9])|([0-1][0-9]:[0-5][0-9])$/.test(
+      document.getElementById(":r0:").value
     );
     if (!isValid) return;
 
