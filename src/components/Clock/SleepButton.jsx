@@ -1,13 +1,19 @@
 import React from "react";
 import { Button } from "@mui/material";
+import { soundStop } from "../../utils";
 
 const SleepButton = (props) => {
   const onClick = (e) => {
     e.preventDefault();
 
     props.setLight(props.light ? false : true);
-    props.setAlarmTime(document.getElementById(":r1:").value);
-  }
+    props.setSleeping(props.sleeping ? false : true);
+
+    if (props.sleeping) {
+      soundStop();
+      props.setPlaying(false);
+    }
+  };
 
   return (
     <Button
@@ -15,7 +21,7 @@ const SleepButton = (props) => {
       sx={{ width: "25%", marginTop: "5%" }}
       onClick={(e) => onClick(e)}
     >
-      Go to Sleep
+      {props.sleeping ? "Wake up" : "Go to Sleep"}
     </Button>
   );
 };

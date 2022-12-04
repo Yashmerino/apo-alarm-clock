@@ -12,7 +12,7 @@ module.exports = {
         use: ["html-loader"],
       },
       {
-        test: /\.(svg|png|gif|jpg)$/,
+        test: /\.(svg|png|gif|jpg|mp3)$/,
         type: "asset/resource",
       },
       {
