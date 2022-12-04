@@ -13,3 +13,16 @@ export const returnCurrentTime = () => {
 export const returnTime = (hours, minutes) => {
   return padTo2Digits(hours) + ":" + padTo2Digits(minutes);
 };
+
+export const sound = () => {
+  var audio = document.createElement("audio");
+  audio.src = "sounds/clock-alarm.mp3";
+  audio.addEventListener(
+    "ended",
+    function () {
+      document.removeChild(this);
+    },
+    false
+  );
+  audio.play();
+};
