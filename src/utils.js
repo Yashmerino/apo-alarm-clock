@@ -9,3 +9,11 @@ export const returnCurrentTime = () => {
     padTo2Digits(new Date().getMinutes())
   );
 };
+
+export const returnTime = (hours, minutes) => {
+  return (
+    padTo2Digits(hours) +
+    ":" +
+    padTo2Digits(minutes)
+  );
+};
