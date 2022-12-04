@@ -1,3 +1,5 @@
+import alarmDefault from "./assets/clock-alarm.mp3";
+
 const padTo2Digits = (num) => {
   return String(num).padStart(2, "0");
 };
@@ -14,15 +16,14 @@ export const returnTime = (hours, minutes) => {
   return padTo2Digits(hours) + ":" + padTo2Digits(minutes);
 };
 
-export const sound = () => {
-  var audio = document.createElement("audio");
-  audio.src = "sounds/clock-alarm.mp3";
-  audio.addEventListener(
-    "ended",
-    function () {
-      document.removeChild(this);
-    },
-    false
-  );
+export const soundPlay = () => {
+  let audio = document.getElementById("audio");
+  audio.src = alarmDefault;
   audio.play();
+};
+
+export const soundStop = () => {
+  let audio = document.getElementById("audio");
+  audio.pause();
+  audio.currentTime = 0;
 };
