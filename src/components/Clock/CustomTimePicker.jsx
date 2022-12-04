@@ -6,16 +6,18 @@ import { TimePicker } from "@mui/x-date-pickers/TimePicker";
 import { returnCurrentTime, returnTime } from "../../utils";
 
 const CustomTimePicker = (props) => {
+  const [value, setValue] = React.useState(null);
+
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <TimePicker
         label={
           props.light ? "Current time: " + returnCurrentTime() : "Sleep well :)"
         }
-        value={props.value}
+        value={value}
         ampm={false}
         onChange={(newValue) => {
-          props.setValue(newValue);
+          setValue(newValue);
           props.setAlarm(returnTime(newValue.$H, newValue.$m));
         }}
         renderInput={(params) => (

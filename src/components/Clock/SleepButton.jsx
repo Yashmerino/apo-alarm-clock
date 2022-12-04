@@ -6,6 +6,7 @@ const SleepButton = (props) => {
     e.preventDefault();
 
     props.setLight(props.light ? false : true);
+    props.setSleeping(props.sleeping ? false : true);
   };
 
   return (
@@ -14,7 +15,7 @@ const SleepButton = (props) => {
       sx={{ width: "25%", marginTop: "5%" }}
       onClick={(e) => onClick(e)}
     >
-      Go to Sleep
+      {props.sleeping ? "Wake up" : "Go to Sleep"}
     </Button>
   );
 };
