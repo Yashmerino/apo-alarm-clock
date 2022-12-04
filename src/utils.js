@@ -11,9 +11,5 @@ export const returnCurrentTime = () => {
 };
 
 export const returnTime = (hours, minutes) => {
-  return (
-    padTo2Digits(hours) +
-    ":" +
-    padTo2Digits(minutes)
-  );
+  return padTo2Digits(hours) + ":" + padTo2Digits(minutes);
 };

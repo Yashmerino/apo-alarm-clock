@@ -6,8 +6,7 @@ const SleepButton = (props) => {
     e.preventDefault();
 
     props.setLight(props.light ? false : true);
-    props.setAlarmTime(document.getElementById(":r1:").value);
-  }
+  };
 
   return (
     <Button

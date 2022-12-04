@@ -4,7 +4,6 @@ import ClockContainer from "../components/Clock/ClockContainer.jsx";
 import Footer from "../components/Footer/Footer.jsx";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { returnCurrentTime } from "../utils";
 
 const themeLight = createTheme({
   palette: {
@@ -20,18 +19,12 @@ const themeDark = createTheme({
 
 const App = (props) => {
   const [light, setLight] = useState(true);
-  const [alarmTime, setAlarmTime] = useState(returnCurrentTime);
 
   return (
     <ThemeProvider theme={light ? themeLight : themeDark}>
       <CssBaseline />
       <Header />
-      <ClockContainer
-        setLight={setLight}
-        light={light}
-        setAlarmTime={setAlarmTime}
-        alarmTime={alarmTime}
-      />
+      <ClockContainer setLight={setLight} light={light} />
       <Footer />
     </ThemeProvider>
   );
