@@ -1,20 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Box } from "@mui/material";
 import CustomTimePicker from "./CustomTimePicker";
 import SleepButton from "./SleepButton";
-import { returnCurrentTime, sound } from "../../utils";
+import { returnCurrentTime, soundPlay } from "../../utils";
 
 const ClockContainer = (props) => {
   const [alarm, setAlarm] = useState(null);
   const [sleeping, setSleeping] = useState(false);
+  const [playing, setPlaying] = useState(false);
 
   const wakeUp = () => {
-    if (returnCurrentTime() === alarm) {
-      sound();
-    }
+    if (returnCurrentTime() === alarm && sleeping) setPlaying(true);
+
+    if (playing) soundPlay();
   };
 
-  setInterval(() => wakeUp(), 10000);
+  useEffect(() => {
+    const interval = setInterval(() => wakeUp(), 5000);
+    return () => clearInterval(interval);
+  }, [alarm, sleeping, playing]);
 
   return (
     <Box
@@ -25,16 +29,15 @@ const ClockContainer = (props) => {
       mt="10%"
       sx={{ flexDirection: "column" }}
     >
-      <CustomTimePicker
-        light={props.light}
-        setAlarm={setAlarm}
-      />
+      <CustomTimePicker light={props.light} setAlarm={setAlarm} />
       <SleepButton
         setLight={props.setLight}
         light={props.light}
         alarm={alarm}
         sleeping={sleeping}
         setSleeping={setSleeping}
+        playing={playing}
+        setPlaying={setPlaying}
       />
     </Box>
   );

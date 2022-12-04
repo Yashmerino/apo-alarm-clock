@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "@mui/material";
+import { soundStop } from "../../utils";
 
 const SleepButton = (props) => {
   const onClick = (e) => {
@@ -7,6 +8,11 @@ const SleepButton = (props) => {
 
     props.setLight(props.light ? false : true);
     props.setSleeping(props.sleeping ? false : true);
+
+    if (props.sleeping) {
+      soundStop();
+      props.setPlaying(false);
+    }
   };
 
   return (
