@@ -17,7 +17,7 @@ const themeDark = createTheme({
   },
 });
 
-const App = (props) => {
+const App = () => {
   const [light, setLight] = useState(true);
 
   return (
