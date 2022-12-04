@@ -33,10 +33,8 @@ const ClockContainer = (props) => {
       <SleepButton
         setLight={props.setLight}
         light={props.light}
-        alarm={alarm}
         sleeping={sleeping}
         setSleeping={setSleeping}
-        playing={playing}
         setPlaying={setPlaying}
       />
     </Box>

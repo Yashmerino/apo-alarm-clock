@@ -6,6 +6,11 @@ const SleepButton = (props) => {
   const onClick = (e) => {
     e.preventDefault();
 
+    let isValid = /^([0-9][0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/.test(
+      document.getElementById(":r1:").value
+    );
+    if (!isValid) return;
+
     props.setLight(props.light ? false : true);
     props.setSleeping(props.sleeping ? false : true);
 

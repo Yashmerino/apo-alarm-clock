@@ -27,7 +27,7 @@ const CustomTimePicker = (props) => {
         ampm={false}
         onChange={(newValue) => {
           setValue(newValue);
-          props.setAlarm(returnTime(newValue.$H, newValue.$m));
+          if (newValue) props.setAlarm(returnTime(newValue.$H, newValue.$m));
         }}
         renderInput={(params) => (
           <TextField {...params} sx={{ width: "25%" }} />
