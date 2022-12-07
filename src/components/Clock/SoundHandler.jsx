@@ -30,10 +30,18 @@ const SoundHandler = (props) => {
         <MenuItem value={Sounds.MILITARY}>Military</MenuItem>
       </Select>
       <Stack direction="row" spacing={2} mt="2%">
-        <Button variant="contained" onClick={() => soundPlay(props.sound)}>
+        <Button
+          variant="contained"
+          onClick={() => soundPlay(props.sound)}
+          disabled={props.sleeping}
+        >
           Preview
         </Button>
-        <Button variant="contained" onClick={() => soundStop()}>
+        <Button
+          variant="contained"
+          onClick={() => soundStop()}
+          disabled={props.sleeping}
+        >
           Stop
         </Button>
       </Stack>
