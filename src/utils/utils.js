@@ -1,4 +1,4 @@
-import alarmDefault from "./assets/clock-alarm.mp3";
+import alarmDefault from "../assets/clock-alarm.mp3";
 
 const padTo2Digits = (num) => {
   return String(num).padStart(2, "0");

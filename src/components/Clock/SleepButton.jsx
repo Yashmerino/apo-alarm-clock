@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@mui/material";
-import { soundStop } from "../../utils";
+import { soundStop } from "../../utils/utils";
 
 const SleepButton = (props) => {
   const onClick = (e) => {

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Box } from "@mui/material";
 import CustomTimePicker from "./CustomTimePicker";
-import SleepButton from "./SleepButton";
-import { returnCurrentTime, soundPlay } from "../../utils";
+import SleepButton from "./SleepButton.jsx";
+import SoundHandler from "./SoundHandler.jsx";
+import { returnCurrentTime, soundPlay } from "../../utils/utils";
 
 const ClockContainer = (props) => {
   const [alarm, setAlarm] = useState(null);
@@ -37,6 +38,7 @@ const ClockContainer = (props) => {
         setSleeping={setSleeping}
         setPlaying={setPlaying}
       />
+      <SoundHandler />
     </Box>
   );
 };
