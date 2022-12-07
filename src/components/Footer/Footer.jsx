@@ -21,11 +21,6 @@ const Footer = () => {
         sx={{ userSelect: "none", textAlign: "center" }}
       >
         Once loaded the alarm will work even without internet connection.
-        <br /> If you wish to contribute to this project here you can find its{" "}
-        <a href="https://github.com/Yashmerino/apoclock-alarm">
-          GitHub repository
-        </a>
-        .
         <br /> Copyright Apo Alarm Clock © 2022. <a href="#">Privacy Policy</a>
       </Typography>
     </Box>
