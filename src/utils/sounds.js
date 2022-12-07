@@ -1,8 +1,8 @@
 const Sounds = {
-  DEFAULT: "default",
-  ALIEN: "alien",
-  NATURE: "nature",
-  MILITARY: "military",
+  DEFAULT: "Default Alarm Sound",
+  ALIEN: "Alien Siren",
+  NATURE: "Nature Chill",
+  MILITARY: "Military Trumpet",
 };
 
 export default Sounds;

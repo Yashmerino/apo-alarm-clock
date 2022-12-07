@@ -4,16 +4,18 @@ import CustomTimePicker from "./CustomTimePicker";
 import SleepButton from "./SleepButton.jsx";
 import SoundHandler from "./SoundHandler.jsx";
 import { returnCurrentTime, soundPlay } from "../../utils/utils";
+import Sounds from "../../utils/sounds";
 
 const ClockContainer = (props) => {
   const [alarm, setAlarm] = useState(null);
   const [sleeping, setSleeping] = useState(false);
   const [playing, setPlaying] = useState(false);
+  const [sound, setSound] = useState(Sounds.DEFAULT)
 
   const wakeUp = () => {
     if (returnCurrentTime() === alarm && sleeping) setPlaying(true);
 
-    if (playing) soundPlay();
+    if (playing) soundPlay(sound);
   };
 
   useEffect(() => {
@@ -38,7 +40,7 @@ const ClockContainer = (props) => {
         setSleeping={setSleeping}
         setPlaying={setPlaying}
       />
-      <SoundHandler />
+      <SoundHandler sound={sound} setSound={setSound} />
     </Box>
   );
 };

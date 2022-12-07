@@ -6,10 +6,8 @@ import Select from "@mui/material/Select";
 import Sounds from "../../utils/sounds";
 
 const SoundHandler = (props) => {
-  const [sound, setSound] = useState(Sounds.DEFAULT);
-
   const handleChange = (event) => {
-    setSound(event.target.value);
+    props.setSound(event.target.value);
   };
 
   return (
@@ -18,7 +16,7 @@ const SoundHandler = (props) => {
       <Select
         labelId="sound-menu-select"
         id="sound-menu-select"
-        value={sound}
+        value={props.sound}
         label="Alarm Sound"
         onChange={handleChange}
       >
