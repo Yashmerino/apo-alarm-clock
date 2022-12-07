@@ -40,7 +40,7 @@ const ClockContainer = (props) => {
         setSleeping={setSleeping}
         setPlaying={setPlaying}
       />
-      <SoundHandler sound={sound} setSound={setSound} />
+      <SoundHandler sound={sound} setSound={setSound} sleeping={sleeping} />
     </Box>
   );
 };

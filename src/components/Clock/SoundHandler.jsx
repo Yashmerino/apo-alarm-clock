@@ -19,6 +19,7 @@ const SoundHandler = (props) => {
         value={props.sound}
         label="Alarm Sound"
         onChange={handleChange}
+        disabled={props.sleeping}
       >
         <MenuItem value={Sounds.DEFAULT}>Default</MenuItem>
         <MenuItem value={Sounds.ALIEN}>Alien</MenuItem>
