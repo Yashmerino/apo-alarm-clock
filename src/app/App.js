@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../components/Header/Header.jsx";
 import ClockContainer from "../components/Clock/ClockContainer.jsx";
 import Footer from "../components/Footer/Footer.jsx";
@@ -19,6 +19,14 @@ const themeDark = createTheme({
 
 const App = () => {
   const [light, setLight] = useState(true);
+
+  const keepScreenUp = async () => {
+    await navigator.wakeLock.request("screen");
+  };
+
+  useEffect(() => {
+    keepScreenUp();
+  });
 
   return (
     <ThemeProvider theme={light ? themeLight : themeDark}>
