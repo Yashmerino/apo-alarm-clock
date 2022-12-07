@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
+import Button from "@mui/material/Button";
+import { Stack } from "@mui/system";
 import Select from "@mui/material/Select";
 import Sounds from "../../utils/sounds";
+import { soundPlay, soundStop } from "../../utils/utils";
 
 const SoundHandler = (props) => {
   const handleChange = (event) => {
@@ -26,6 +29,14 @@ const SoundHandler = (props) => {
         <MenuItem value={Sounds.NATURE}>Nature</MenuItem>
         <MenuItem value={Sounds.MILITARY}>Military</MenuItem>
       </Select>
+      <Stack direction="row" spacing={2} mt="2%">
+        <Button variant="contained" onClick={() => soundPlay(props.sound)}>
+          Preview
+        </Button>
+        <Button variant="contained" onClick={() => soundStop()}>
+          Stop
+        </Button>
+      </Stack>
     </FormControl>
   );
 };
