@@ -21,6 +21,12 @@ module.exports = merge(common, {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/template.html",
+      chunks: ["main"],
+    }),
+    new HtmlWebpackPlugin({
+      filename: "privacy_policy.html",
+      template: "./src/privacy_policy.html",
+      chunks: ["privacy_policy"],
     }),
   ],
 });
