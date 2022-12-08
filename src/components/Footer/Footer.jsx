@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Box } from "@mui/material";
+import { Typography, Box, Link } from "@mui/material";
 
 const Footer = () => {
   return (
@@ -21,7 +21,8 @@ const Footer = () => {
         sx={{ userSelect: "none", textAlign: "center" }}
       >
         Once loaded the alarm will work even without internet connection.
-        <br /> Copyright Apo Alarm Clock © 2022. <a href="#">Privacy Policy</a>
+        <br /> Copyright Apo Alarm Clock © 2022.{" "}
+        <Link href="privacy_policy.html">Privacy Policy</Link>
       </Typography>
     </Box>
   );
