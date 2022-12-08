@@ -24,6 +24,17 @@ module.exports = merge(common, {
     new MiniCssExtractPlugin({ filename: "[name].[contenthash].css" }),
     new HtmlWebpackPlugin({
       template: "./src/template.html",
+      chunks: ["main"],
+      minify: {
+        removeAttributeQuotes: true,
+        collapseWhitespace: true,
+        removeComments: true,
+      },
+    }),
+    new HtmlWebpackPlugin({
+      filename: "privacy_policy.html",
+      template: "./src/privacy_policy.html",
+      chunks: ["privacy_policy"],
       minify: {
         removeAttributeQuotes: true,
         collapseWhitespace: true,
