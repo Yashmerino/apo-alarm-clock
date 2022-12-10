@@ -4,10 +4,10 @@ import React from "react";
 const Header = () => {
   return (
     <Box
+      className="header"
       display="flex"
       textAlign="center"
       minHeight="25%"
-      width="35%"
       mt="2.5%"
       mr="2.5%"
       ml="3.5%"

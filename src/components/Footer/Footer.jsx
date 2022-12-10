@@ -4,6 +4,7 @@ import { Typography, Box, Link } from "@mui/material";
 const Footer = () => {
   return (
     <Box
+      className="footer"
       display="flex"
       justifyContent="left"
       alignItems="left"
@@ -12,7 +13,6 @@ const Footer = () => {
       ml="5%"
       mt="4%"
       bottom="0"
-      width="95%"
       flexDirection="column"
     >
       <Typography
@@ -32,7 +32,7 @@ const Footer = () => {
         sx={{ userSelect: "none", fontSize: "14px", marginBottom: "0.5%" }}
         paragraph={true}
       >
-        Copyright Apo Alarm Clock © 2022.&nbsp; &nbsp;&nbsp; &nbsp;
+        Copyright Apo Alarm Clock © 2022.&nbsp;&nbsp;&nbsp;&nbsp;
         <Link href="privacy_policy.html" sx={{ color: "#FAAFB4" }}>
           Privacy Policy
         </Link>

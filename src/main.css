@@ -43,6 +43,14 @@ body {
   user-select: none;
 }
 
+.header {
+  width: 35%;
+}
+
+.footer {
+  width: 95%;
+}
+
 @viewport {
   width: device-width;
   zoom: 1;
@@ -63,7 +71,7 @@ body {
     margin-bottom: 10%;
     margin-top: 10%;
     width: 75%;
-    margin-right: 2.5%;
+    margin-right: 5%;
     margin-left: 5%;
     padding-left: 5%;
     padding-right: 5%;
@@ -74,11 +82,20 @@ body {
     font-size: 36px !important;
   }
 
+  .header {
+    width: 90%;
+  }
+
+  .footer {
+    width: 75%;
+  }
+
   .mail-support {
     color: rgb(250, 175, 180);
     user-select: none;
     float: none;
     margin: 0;
     margin-top: 2%;
+    text-align: center;
   }
 }
