@@ -3,10 +3,11 @@ import TextField from "@mui/material/TextField";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { TimePicker } from "@mui/x-date-pickers/TimePicker";
-import { returnTime } from "../../utils/utils";
+import { returnCurrentTime, returnTime } from "../../utils/utils";
 
 const CustomTimePicker = (props) => {
   const [value, setValue] = useState(null);
+  const [currentTime, setCurrentTime] = useState(returnCurrentTime());
 
   useEffect(() => {
     const interval = setInterval(
@@ -21,7 +22,7 @@ const CustomTimePicker = (props) => {
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <TimePicker
-        label={props.light ? "Set Time" : "Sleep well :)"}
+        label={props.light ? "Current time: " + currentTime : "Sleep well :)"}
         value={value}
         ampm={false}
         onChange={(newValue) => {
