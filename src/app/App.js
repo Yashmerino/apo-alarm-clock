@@ -5,6 +5,7 @@ import Footer from "../components/Footer/Footer.jsx";
 import CssBaseline from "@mui/material/CssBaseline";
 import Image from "../components/Clock/Image";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { Typography } from "@mui/material";
 
 const themeLight = createTheme({
   palette: {
@@ -33,6 +34,14 @@ const App = () => {
     <ThemeProvider theme={light ? themeLight : themeDark}>
       <CssBaseline />
       <Header />
+      <div className="mail-support">
+        <Typography
+          sx={{ userSelect: "none", fontSize: "14px", fontWeight: "700" }}
+          paragraph={true}
+        >
+          For suggestions: artiom@apoalarmclock.com
+        </Typography>
+      </div>
       <Image />
       <ClockContainer setLight={setLight} light={light} />
       <Footer />
