@@ -25,18 +25,7 @@ const ClockContainer = (props) => {
 
   return (
     <Box
-      boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
-      borderRadius="15px"
-      display="flex"
-      justifyContent="center"
-      alignItems="left"
-      width="30%"
-      height="15%"
-      mt="4%"
-      mr="2.5%"
-      ml="5%"
-      pl="1%"
-      pt="2%"
+      className="clock-container"
       sx={{ flexDirection: "column" }}
     >
       <Typography

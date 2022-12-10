@@ -14,14 +14,10 @@ const Header = () => {
       sx={{ flexDirection: "column" }}
     >
       <Typography
+        fontWeight="900"
+        fontSize="64px"
+        className="title"
         variant="h5"
-        style={{
-          color: "#9EBBD8",
-          fontWeight: 900,
-          fontSize: "64px",
-          userSelect: "none",
-          alignContent: "flex-end",
-        }}
       >
         Apo Alarm Clock
       </Typography>
