@@ -36,7 +36,7 @@ const SoundHandler = (props) => {
             fontSize: "12px",
             borderRadius: "15px",
             backgroundColor: "#9EBBD8",
-            height: "2%"
+            height: "2%",
           }}
           variant="contained"
           onClick={() => soundPlay(props.sound)}
@@ -51,7 +51,7 @@ const SoundHandler = (props) => {
             borderRadius: "15px",
             backgroundColor: "#9EBBD8",
             height: "2%",
-            marginLeft: "5%"
+            marginLeft: "5%",
           }}
           variant="contained"
           onClick={() => soundStop()}

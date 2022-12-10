@@ -2,13 +2,12 @@ import "@testing-library/jest-dom";
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import CustomTimePicker from "../components/Clock/CustomTimePicker";
-import { returnCurrentTime } from "../utils/utils";
 
 test("checks the text of timepicker", async () => {
   render(<CustomTimePicker light={true} />);
 
   expect(
-    screen.getByLabelText("Current time: " + returnCurrentTime())
+    screen.getByLabelText("Set Time")
   ).toBeInTheDocument();
 });
 

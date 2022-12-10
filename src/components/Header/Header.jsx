@@ -11,10 +11,32 @@ const Header = () => {
       mt="2.5%"
       mr="2.5%"
       ml="3.5%"
-      sx={{ flexDirection: 'column' }}
+      sx={{ flexDirection: "column" }}
     >
-      <Typography variant="h5" style={{color: "#9EBBD8", fontWeight: 900, fontSize: "64px", userSelect: "none", alignContent: "flex-end" }}>Apo Alarm Clock</Typography>
-      <Typography variant="subtitle1" style={{color: "#FAAFB4", fontWeight: 700, fontSize: "20px", lineHeight: 1, userSelect: "none"}}>Never be late again</Typography>
+      <Typography
+        variant="h5"
+        style={{
+          color: "#9EBBD8",
+          fontWeight: 900,
+          fontSize: "64px",
+          userSelect: "none",
+          alignContent: "flex-end",
+        }}
+      >
+        Apo Alarm Clock
+      </Typography>
+      <Typography
+        variant="subtitle1"
+        style={{
+          color: "#FAAFB4",
+          fontWeight: 700,
+          fontSize: "20px",
+          lineHeight: 1,
+          userSelect: "none",
+        }}
+      >
+        Never be late again
+      </Typography>
     </Box>
   );
 };

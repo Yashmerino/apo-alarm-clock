@@ -10,7 +10,7 @@ const ClockContainer = (props) => {
   const [alarm, setAlarm] = useState(null);
   const [sleeping, setSleeping] = useState(false);
   const [playing, setPlaying] = useState(false);
-  const [sound, setSound] = useState(Sounds.DEFAULT)
+  const [sound, setSound] = useState(Sounds.DEFAULT);
 
   const wakeUp = () => {
     if (returnCurrentTime() === alarm && sleeping) setPlaying(true);
@@ -39,7 +39,16 @@ const ClockContainer = (props) => {
       pt="2%"
       sx={{ flexDirection: "column" }}
     >
-      <Typography sx={{color:"#FAAFB4", fontWeight: 700, fontSize: "18px"}}>General Settings</Typography>
+      <Typography
+        sx={{
+          color: "#FAAFB4",
+          fontWeight: 700,
+          fontSize: "18px",
+          userSelect: "none",
+        }}
+      >
+        General Settings
+      </Typography>
       <CustomTimePicker light={props.light} setAlarm={setAlarm} />
       <SleepButton
         setLight={props.setLight}
@@ -48,7 +57,17 @@ const ClockContainer = (props) => {
         setSleeping={setSleeping}
         setPlaying={setPlaying}
       />
-      <Typography sx={{color:"#FAAFB4", fontWeight: 700, fontSize: "18px", mt: "10%"}}>Additional settings</Typography>
+      <Typography
+        sx={{
+          color: "#FAAFB4",
+          fontWeight: 700,
+          fontSize: "18px",
+          mt: "10%",
+          userSelect: "none",
+        }}
+      >
+        Additional settings
+      </Typography>
       <SoundHandler sound={sound} setSound={setSound} sleeping={sleeping} />
     </Box>
   );
