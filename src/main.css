@@ -28,11 +28,19 @@ body {
 }
 
 .title {
-  color: #9EBBD8;
+  color: #9ebbd8;
   font-weight: 900;
   font-size: 64px;
   user-select: none;
   align-content: flex-end;
+}
+
+.mail-support {
+  float: right;
+  margin-top: -4.5%;
+  margin-right: 5%;
+  color: rgb(250, 175, 180);
+  user-select: none;
 }
 
 @viewport {
@@ -63,6 +71,14 @@ body {
   }
 
   .title {
-    font-size: 36px !IMPORTANT; 
+    font-size: 36px !important;
+  }
+
+  .mail-support {
+    color: rgb(250, 175, 180);
+    user-select: none;
+    float: none;
+    margin: 0;
+    margin-top: 2%;
   }
 }
