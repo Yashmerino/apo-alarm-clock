@@ -3,6 +3,7 @@ import Header from "../components/Header/Header.jsx";
 import ClockContainer from "../components/Clock/ClockContainer.jsx";
 import Footer from "../components/Footer/Footer.jsx";
 import CssBaseline from "@mui/material/CssBaseline";
+import Image from "../components/Clock/Image";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 const themeLight = createTheme({
@@ -32,6 +33,7 @@ const App = () => {
     <ThemeProvider theme={light ? themeLight : themeDark}>
       <CssBaseline />
       <Header />
+      <Image />
       <ClockContainer setLight={setLight} light={light} />
       <Footer />
     </ThemeProvider>

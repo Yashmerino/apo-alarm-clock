@@ -4,3 +4,9 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.image {
+  width: 55%;
+  position: absolute;
+  right: 0;
+}

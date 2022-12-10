@@ -23,7 +23,13 @@ const SleepButton = (props) => {
   return (
     <Button
       variant="contained"
-      sx={{ width: "25%", marginTop: "2%" }}
+      sx={{
+        width: "35%",
+        fontSize: "12px",
+        borderRadius: "15px",
+        backgroundColor: "#9EBBD8",
+        marginTop: "2%",
+      }}
       onClick={(e) => onClick(e)}
     >
       {props.sleeping ? "Wake up" : "Go to Sleep"}

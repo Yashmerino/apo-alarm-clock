@@ -5,16 +5,38 @@ const Header = () => {
   return (
     <Box
       display="flex"
-      justifyContent="center"
-      alignItems="center"
+      textAlign="center"
       minHeight="25%"
-      mt="1%"
+      width="35%"
+      mt="2.5%"
       mr="2.5%"
-      ml="2.5%"
-      sx={{ flexDirection: 'column' }}
+      ml="3.5%"
+      sx={{ flexDirection: "column" }}
     >
-      <Typography variant="h5" style={{fontWeight: 500, userSelect: "none", textAlign: "center" }}>Apo Alarm Clock</Typography>
-      <Typography variant="subtitle1" style={{lineHeight: 1, userSelect: "none", textAlign: "center"}}>Never be late again</Typography>
+      <Typography
+        variant="h5"
+        style={{
+          color: "#9EBBD8",
+          fontWeight: 900,
+          fontSize: "64px",
+          userSelect: "none",
+          alignContent: "flex-end",
+        }}
+      >
+        Apo Alarm Clock
+      </Typography>
+      <Typography
+        variant="subtitle1"
+        style={{
+          color: "#FAAFB4",
+          fontWeight: 700,
+          fontSize: "20px",
+          lineHeight: 1,
+          userSelect: "none",
+        }}
+      >
+        Never be late again
+      </Typography>
     </Box>
   );
 };

@@ -14,7 +14,7 @@ const SoundHandler = (props) => {
   };
 
   return (
-    <FormControl sx={{ m: 10, minWidth: "25%" }} size="small">
+    <FormControl sx={{ mt: "6%", width: "96%" }} size="small">
       <InputLabel id="sound-menu">Alarm Sound</InputLabel>
       <Select
         labelId="sound-menu-select"
@@ -29,8 +29,15 @@ const SoundHandler = (props) => {
         <MenuItem value={Sounds.NATURE}>Nature</MenuItem>
         <MenuItem value={Sounds.MILITARY}>Military</MenuItem>
       </Select>
-      <Stack direction="row" spacing={2} mt="2%">
+      <Stack direction="row" mb="10%" height="5%" mt="2%">
         <Button
+          sx={{
+            width: "35%",
+            fontSize: "12px",
+            borderRadius: "15px",
+            backgroundColor: "#9EBBD8",
+            height: "2%",
+          }}
           variant="contained"
           onClick={() => soundPlay(props.sound)}
           disabled={props.sleeping}
@@ -38,6 +45,14 @@ const SoundHandler = (props) => {
           Preview
         </Button>
         <Button
+          sx={{
+            width: "35%",
+            fontSize: "12px",
+            borderRadius: "15px",
+            backgroundColor: "#9EBBD8",
+            height: "2%",
+            marginLeft: "5%",
+          }}
           variant="contained"
           onClick={() => soundStop()}
           disabled={props.sleeping}
