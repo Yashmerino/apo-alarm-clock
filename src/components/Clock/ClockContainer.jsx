@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import CustomTimePicker from "./CustomTimePicker";
 import SleepButton from "./SleepButton.jsx";
 import SoundHandler from "./SoundHandler.jsx";
@@ -25,13 +25,21 @@ const ClockContainer = (props) => {
 
   return (
     <Box
+      boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
+      borderRadius="15px"
       display="flex"
       justifyContent="center"
-      alignItems="center"
-      minHeight="50%"
-      mt="10%"
+      alignItems="left"
+      width="30%"
+      height="15%"
+      mt="4%"
+      mr="2.5%"
+      ml="5%"
+      pl="1%"
+      pt="2%"
       sx={{ flexDirection: "column" }}
     >
+      <Typography sx={{color:"#FAAFB4", fontWeight: 700, fontSize: "18px"}}>General Settings</Typography>
       <CustomTimePicker light={props.light} setAlarm={setAlarm} />
       <SleepButton
         setLight={props.setLight}
@@ -40,6 +48,7 @@ const ClockContainer = (props) => {
         setSleeping={setSleeping}
         setPlaying={setPlaying}
       />
+      <Typography sx={{color:"#FAAFB4", fontWeight: 700, fontSize: "18px", mt: "10%"}}>Additional settings</Typography>
       <SoundHandler sound={sound} setSound={setSound} sleeping={sleeping} />
     </Box>
   );
