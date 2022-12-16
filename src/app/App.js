@@ -36,7 +36,7 @@ const App = () => {
       <Header />
       <div className="mail-support">
         <Typography
-          sx={{ userSelect: "none", fontSize: "14px", fontWeight: "700" }}
+          sx={{ userSelect: "none", fontSize: "14px", fontWeight: "700", display: "none" }}
           paragraph={true}
         >
           For suggestions: artiom@apoalarmclock.com
