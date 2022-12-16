@@ -37,7 +37,7 @@ const App = () => {
       <div className="mail-support">
         <Typography
           sx={{ userSelect: "none", fontSize: "14px", fontWeight: "700" }}
-          paragraph={true}
+          paragraph={true} disabled={true}
         >
           For suggestions: artiom@apoalarmclock.com
         </Typography>
