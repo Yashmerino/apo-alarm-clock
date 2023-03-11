@@ -1,6 +1,6 @@
 [![Node.js CI](https://github.com/Yashmerino/apo-alarm-clock/actions/workflows/node.js.yml/badge.svg)](https://github.com/Yashmerino/apo-alarm-clock/actions/workflows/node.js.yml)
 
-<h1 align="center"><strong><em>Random Cat Generator</strong></em></h1>
+<h1 align="center"><strong><em>Apo Alarm Clock</strong></em></h1>
 
 <p>To contribute to this project:</p> 
 
