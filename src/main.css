@@ -1,15 +1,28 @@
+/* global reset and responsive helpers */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Roboto", sans-serif;
-
   margin: 0;
   padding: 0;
+  min-height: 100vh;
+  /* prevent horizontal scroll caused by positioned elements */
+  overflow-x: hidden;
 }
 
 .image {
-  width: 55%;
+  max-width: 55%;
+  width: 50vw;
   position: absolute;
   right: 0;
+  top: 0;
   opacity: 0.6;
+  height: auto;
+  pointer-events: none; /* avoid overlaying clicks */
 }
 
 .clock-container {
@@ -17,22 +30,23 @@ body {
   border-radius: 15px;
   display: flex;
   justify-content: center;
-  align-items: left;
-  width: 30%;
-  height: 15%;
-  margin-top: 4%;
-  margin-right: 2.5%;
-  margin-left: 5%;
-  padding-left: 1%;
-  padding-top: 2%;
+  align-items: flex-start;
+  /* let the container scale but not exceed a sensible max */
+  width: min(30%, 720px);
+  max-width: 90vw;
+  height: auto;
+  margin: 4% 2.5% 0 5%;
+  padding: 1% 1% 2% 1%;
 }
 
 .title {
   color: #9ebbd8;
   font-weight: 900;
-  font-size: 64px;
+  /* responsive, will shrink on small viewports or when zoomed */
+  font-size: clamp(28px, 5vw, 64px);
   user-select: none;
   align-content: flex-end;
+  line-height: 1.05;
 }
 
 .mail-support {
@@ -45,16 +59,15 @@ body {
 
 .header {
   width: 35%;
+  max-width: 95vw;
 }
 
 .footer {
   width: 95%;
+  max-width: 95vw;
 }
 
-@viewport {
-  width: device-width;
-  zoom: 1;
-}
+/* remove non-standard @viewport usage - rely on meta viewport in HTML */
 
 @media screen and (min-width: 150px) and (max-width: 960px) {
   #root {
